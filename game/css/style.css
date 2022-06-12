@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#love {
+    width: 800px;
+    height: 150px;
+    margin: 20px;
+    background-color: rgb(255,178,1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#yuna {
+    height: 400px;
+    width: auto;
+}
+
+#shop-items {
+    width: 800px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
