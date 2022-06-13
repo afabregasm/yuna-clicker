@@ -26,30 +26,29 @@ function addToLove(amount) {
     totalLove.innerText = Number(totalLove.innerText) + Number(amount);
 }
 
-async function playGame() {
-    while(true) {
-        await new Promise(game => setTimeout(game, 1000));
-        let waterPerSecond = Math.round(totalWater.innerText * 1);
-        let foodPerSecond = Math.round(totalFood.innerText * 2);
-        let bedPerSecond = Math.round(totalBed.innerText * 3);
-        let toyPerSecond = Math.round(totalToy.innerText * 4);
-        let accessoryPerSecond = Math.round(totalAccessory.innerText * 5);
-        let treatPerSecond = Math.round(totalTreat.innerText * 6);
+function playGame() {
 
-        addToLove(waterPerSecond);
-        addToLove(foodPerSecond);
-        addToLove(bedPerSecond);
-        addToLove(toyPerSecond);
-        addToLove(accessoryPerSecond);
-        addToLove(treatPerSecond);
+    let waterPerSecond = Math.round(totalWater.innerText * 1);
+    let foodPerSecond = Math.round(totalFood.innerText * 2);
+    let bedPerSecond = Math.round(totalBed.innerText * 3);
+    let toyPerSecond = Math.round(totalToy.innerText * 4);
+    let accessoryPerSecond = Math.round(totalAccessory.innerText * 5);
+    let treatPerSecond = Math.round(totalTreat.innerText * 6);
 
-        lovePerSecond.innerText = Number(waterPerSecond) + Number(foodPerSecond) + Number(bedPerSecond) + Number(toyPerSecond) + Number(accessoryPerSecond) + Number(treatPerSecond);
-        console.log(`${totalWater.innerText} water | ${totalFood.innerText} food | ${totalBed.innerText} bed | ${totalToy.innerText} toy | ${totalAccessory.innerText} accessory | ${totalTreat.innerText} treat`);
-    }
+    addToLove(waterPerSecond);
+    addToLove(foodPerSecond);
+    addToLove(bedPerSecond);
+    addToLove(toyPerSecond);
+    addToLove(accessoryPerSecond);
+    addToLove(treatPerSecond);
+
+    lovePerSecond.innerText = Number(waterPerSecond) + Number(foodPerSecond) + Number(bedPerSecond) + Number(toyPerSecond) + Number(accessoryPerSecond) + Number(treatPerSecond);
+    console.log(`${totalWater.innerText} water | ${totalFood.innerText} food | ${totalBed.innerText} bed | ${totalToy.innerText} toy | ${totalAccessory.innerText} accessory | ${totalTreat.innerText} treat`);
+
 }
 
 window.addEventListener('load', () => {
-
+    
     // Funciones dentro del Listener
     yunaInteract.addEventListener('click', function() {
         addToLove(increment);
@@ -109,6 +108,6 @@ window.addEventListener('load', () => {
         }
     });
 
-    playGame();
+    setInterval(playGame, 1000);
 
 });
