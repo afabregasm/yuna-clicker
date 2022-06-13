@@ -16,7 +16,7 @@ body {
 }
 
 #love {
-    width: 800px;
+    width: 850px;
     height: 150px;
     margin: 20px;
     background-color: rgb(255,178,1);
@@ -33,10 +33,22 @@ body {
 }
 
 #shop-items {
-    width: 800px;
     height: 200px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#shop-items div {
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    background-color: bisque;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
