@@ -28,6 +28,10 @@ function addToLove(amount) {
     totalLove.innerText = Number(totalLove.innerText) + Number(amount);
 }
 
+function loseLove() {
+    lpsLost.innerText = Number(lpsLost.innerText) + Number(1);
+}
+
 function playGame() {
 
     let waterPerSecond = Math.round(totalWater.innerText * 1);
@@ -112,5 +116,6 @@ window.addEventListener('load', () => {
     });
 
     setInterval(playGame, 1000);
+    setInterval(loseLove, 10000);
 
 });
