@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/game.css" />
   <title>Yuna Clicker</title>
 </head>
 <body>
@@ -17,7 +17,20 @@
       <h3>( +<span id="lps-gained">0</span> | -<span id="lps-lost">0</span> )</h3>
     </div>
   </section>
-  <img id="yuna" src="./img/yuna.jpg" alt="Yuna" />
+  <section id="display">
+    <img id="yuna" src="./img/yuna.jpg" alt="Yuna" />
+    <div id="list">
+      <h3>Para ser feliz, necesito:</h3>
+      <ul>
+        <li>90 Agua</li>
+        <li>40 Comida</li>
+        <li>35 Camas</li>
+        <li>25 Juguetes</li>
+        <li>25 Accesorios</li>
+        <li>15 Chuches</li>
+      </ul>
+    </div>
+  </section>
   <section id="shop-items">
     <div id="water">
       <h3><span id="water-total">0</span> Agua</h3>
@@ -50,6 +63,6 @@
       <button id="treat-button">Comprar Chuche</button>
     </div>
   </section>
-  <script src="./js/index.js"></script>
+  <script src="./js/game.js"></script>
 </body>
 </html>

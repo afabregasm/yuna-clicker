@@ -46,9 +46,24 @@ body {
     margin: 0px;
 }
 
+#display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 #yuna {
     height: 400px;
     width: auto;
+    margin: 0px 30px;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
 #shop-items {
