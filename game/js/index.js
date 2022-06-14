@@ -1,5 +1,6 @@
 // Variables Globales
 let increment = 1;
+let decrement = 1;
 
 // Elementos del HTML
 const yunaInteract = document.getElementById("yuna");
@@ -29,7 +30,7 @@ function addToLove(amount) {
 }
 
 function loseLove() {
-    lpsLost.innerText = Number(lpsLost.innerText) + Number(1);
+    lpsLost.innerText = Number(lpsLost.innerText) + Number(decrement);
 }
 
 function playGame() {
@@ -52,6 +53,9 @@ function playGame() {
     lpsGained.innerText = Number(waterPerSecond) + Number(foodPerSecond) + Number(bedPerSecond) + Number(toyPerSecond) + Number(accessoryPerSecond) + Number(treatPerSecond);
     console.log(`${totalWater.innerText} water | ${totalFood.innerText} food | ${totalBed.innerText} bed | ${totalToy.innerText} toy | ${totalAccessory.innerText} accessory | ${totalTreat.innerText} treat`);
 
+    if(Number(lovePerSecond.innerText) < 0) {
+        window.location.replace("../../game-lose/index.html");
+    }
 }
 
 window.addEventListener('load', () => {
