@@ -1,26 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
 html {
+    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    height: 100%;
   }
 
 body {
+    margin: 0px;
+    height: 100vh;
+    background-image: url("./../img/background.png");
+    background-size: 2000px auto;
+    background-position: center;
     font-family: 'Montserrat', sans-serif;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
 
 #love {
     width: 750px;
-    height: 150px;
-    margin: 20px;
-    background-color: rgb(255,178,1);
-    border-radius: 20px;
+    height: 100px;
+    margin: 10px 0px 0px 0px;
+    background-color: rgb(255,178,1,0.8);
+    border: 3px solid #000;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    color: #000;
+    padding: 16px 24px;
+    position: relative;
+    text-decoration: none;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -47,42 +60,84 @@ body {
 }
 
 #display {
+    width: 140vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 #yuna {
-    height: 400px;
+    height: 500px;
     width: auto;
-    margin: 0px 30px;
+    margin: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+#yuna:hover {
+    transform: scale(1.05);
+}
+
+#yuna:active {
+    transform: scale(0.95);
 }
 
 #list {
+    padding: 40px 20px;
+    margin: 10px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255);
+    border: 3px solid #000;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
 }
 
+#list img {
+    height: 40px;
+    width: auto;
+    padding-left: 100px;
+    margin-top: -50px;
+}
+
 #shop-items {
-    height: 200px;
+    height: auto;
+    margin: 0px 0px 20px 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
 
-#shop-items div {
+#shop-items button {
+    font-family: 'Montserrat', sans-serif;
     height: 150px;
     width: 150px;
     padding: 10px;
-    margin: 10px;
-    background-color: bisque;
-    border-radius: 10px;
+    margin: 0px 10px;
+    text-decoration: none;
+    background-color: rgb(255,178,1,0.8);
+    border: 3px solid #000;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    transition: all 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+}
+
+#shop-items button:hover {
+    transform: scale(1.1);
+}
+
+#shop-items button:active {
+    transform: scale(0.9);
 }

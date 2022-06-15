@@ -1,6 +1,7 @@
 // Variables GLOBALES
 let gameStart = false;
 const yunaInteract = document.getElementById("yuna");
+
 let increment = 1;
 let factor = 1.09;
 let totalLove = document.getElementById("love-total");
@@ -110,7 +111,7 @@ window.addEventListener('load', () => {
             totalWater.innerText = Number(totalWater.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(waterCost.innerText);
             waterCost.innerText = Math.round(10 * (Number(waterBuyFactor) ** Number(totalWater.innerText)));
-            if(Number(totalWater.innerText) % 20 === 0) {
+            if(Number(totalWater.innerText) % 25 === 0) {
                 waterMultiplier += 1;
             }
         }
