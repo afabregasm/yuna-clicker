@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
 html {
-    height: 100%;
-    width: 100%;
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
   }
 
 body {
+    font-family: 'Montserrat', sans-serif;
     margin: 0px;
     height: 100vh;
     background-image: url("./../img/background.png");
     background-size: 2000px auto;
     background-position: center;
-    font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,16 +23,15 @@ body {
 #love {
     width: 750px;
     height: 100px;
-    margin: 10px 0px 0px 0px;
-    background-color: rgb(255,178,1,0.8);
+    margin: 15px 0px 0px 0px;
+    padding: 16px 24px;
     border: 3px solid #000;
     border-bottom-left-radius: 15px 255px;
     border-bottom-right-radius: 225px 15px;
     border-top-left-radius: 255px 15px;
     border-top-right-radius: 15px 225px;
+    background-color: rgb(255,178,1);
     color: #000;
-    padding: 16px 24px;
-    position: relative;
     text-decoration: none;
     display: flex;
     flex-direction: row;
@@ -83,15 +82,15 @@ body {
 }
 
 #list {
-    padding: 40px 20px;
     margin: 10px;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255);
+    padding: 40px 20px;
+    background-color: rgb(255, 250, 242);
     border: 3px solid #000;
     border-bottom-left-radius: 15px 255px;
     border-bottom-right-radius: 225px 15px;
     border-top-left-radius: 255px 15px;
     border-top-right-radius: 15px 225px;
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -101,8 +100,8 @@ body {
 #list img {
     height: 40px;
     width: auto;
-    padding-left: 100px;
     margin-top: -50px;
+    padding-left: 100px;
 }
 
 #shop-items {
@@ -118,15 +117,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     height: 150px;
     width: 150px;
-    padding: 10px;
     margin: 0px 10px;
-    text-decoration: none;
-    background-color: rgb(255,178,1,0.8);
+    padding: 10px;
+    background-color: rgb(192,192,192);
     border: 3px solid #000;
     border-bottom-left-radius: 15px 255px;
     border-bottom-right-radius: 225px 15px;
     border-top-left-radius: 255px 15px;
     border-top-right-radius: 15px 225px;
+    text-decoration: none;
     transition: all 0.2s ease-in-out;
     display: flex;
     flex-direction: column;

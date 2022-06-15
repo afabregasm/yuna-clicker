@@ -85,7 +85,7 @@ function playGame() {
     lpsGained.innerText = Number(waterPerSecond) + Number(foodPerSecond) + Number(bedPerSecond) + Number(toyPerSecond) + Number(accessoryPerSecond) + Number(treatPerSecond);
     // console.log(`${totalWater.innerText} water | ${totalFood.innerText} food | ${totalBed.innerText} bed | ${totalToy.innerText} toy | ${totalAccessory.innerText} accessory | ${totalTreat.innerText} treat`);
 
-    if((Number(totalWater.innerText) >= 90) && (Number(totalFood.innerText) >= 40) && (Number(totalBed.innerText) >= 35) && (Number(totalToy.innerText) >= 25) && (Number(totalAccessory.innerText) >= 25) && (Number(totalTreat.innerText) >= 15)) {
+    if((Number(totalWater.innerText) >= 90) && (Number(totalFood.innerText) >= 40) && (Number(totalBed.innerText) >= 35) && (Number(totalToy.innerText) >= 20) && (Number(totalAccessory.innerText) >= 25) && (Number(totalTreat.innerText) >= 15)) {
         window.location.replace("./../html/game-win.html");
     }
 
@@ -94,6 +94,54 @@ function playGame() {
     }
 
 };
+
+function waterStyleUpdate() {
+    if(Number(totalLove.innerText) >= Number(waterCost.innerText)) {
+        buyWater.style.backgroundColor = "yellowgreen";
+    } else {
+        buyWater.style.backgroundColor = "silver";
+    }
+}
+
+function foodStyleUpdate() {
+    if(Number(totalLove.innerText) >= Number(foodCost.innerText)) {
+        buyFood.style.backgroundColor = "yellowgreen";
+    } else {
+        buyFood.style.backgroundColor = "silver";
+    }
+}
+
+function bedStyleUpdate() {
+    if(Number(totalLove.innerText) >= Number(bedCost.innerText)) {
+        buyBed.style.backgroundColor = "yellowgreen";
+    } else {
+        buyBed.style.backgroundColor = "silver";
+    }
+}
+
+function toyStyleUpdate() {
+    if(Number(totalLove.innerText) >= Number(toyCost.innerText)) {
+        buyToy.style.backgroundColor = "yellowgreen";
+    } else {
+        buyToy.style.backgroundColor = "silver";
+    }
+}
+
+function accessoryStyleUpdate() {
+    if(Number(totalLove.innerText) >= Number(accessoryCost.innerText)) {
+        buyAccessory.style.backgroundColor = "yellowgreen";
+    } else {
+        buyAccessory.style.backgroundColor = "silver";
+    }
+}
+
+function treatStyleUpdate() {
+    if(Number(totalLove.innerText) >= Number(treatCost.innerText)) {
+        buyTreat.style.backgroundColor = "yellowgreen";
+    } else {
+        buyTreat.style.backgroundColor = "silver";
+    }
+}
 
 window.addEventListener('load', () => {
     
@@ -173,6 +221,13 @@ window.addEventListener('load', () => {
     });
 
     setInterval(playGame, 1000);
+
+    setInterval(waterStyleUpdate, 10);
+    setInterval(foodStyleUpdate, 10);
+    setInterval(bedStyleUpdate, 10);
+    setInterval(toyStyleUpdate, 10);
+    setInterval(accessoryStyleUpdate, 10);
+    setInterval(treatStyleUpdate, 10);
 
 });
 
