@@ -11,6 +11,7 @@ let lpsLost = document.getElementById("lps-lost");
 
 // Variables AGUA
 const buyWater = document.getElementById("water-button");
+const waterList = document.getElementById("water-list");
 let totalWater = document.getElementById("water-total");
 let waterCost = document.getElementById("water-price");
 let waterBuyFactor = 1.07;
@@ -18,6 +19,7 @@ let waterMultiplier = 1;
 
 // Variables COMIDA
 const buyFood = document.getElementById("food-button");
+const foodList = document.getElementById("food-list");
 let totalFood = document.getElementById("food-total");
 let foodCost = document.getElementById("food-price");
 let foodBuyFactor = 1.14;
@@ -25,6 +27,7 @@ let foodMultiplier = 1;
 
 // Variables CAMAS
 const buyBed = document.getElementById("bed-button");
+const bedList = document.getElementById("bed-list");
 let totalBed = document.getElementById("bed-total");
 let bedCost = document.getElementById("bed-price");
 let bedBuyFactor = 1.12;
@@ -32,6 +35,7 @@ let bedMultiplier = 1;
 
 // Variables JUGUETES
 const buyToy = document.getElementById("toy-button");
+const toyList = document.getElementById("toy-list");
 let totalToy = document.getElementById("toy-total");
 let toyCost = document.getElementById("toy-price");
 let toyBuyFactor = 1.10;
@@ -39,6 +43,7 @@ let toyMultiplier = 1;
 
 // Variables ACCESORIOS
 const buyAccessory = document.getElementById("accessory-button");
+const accessoryList = document.getElementById("accessory-list");
 let totalAccessory = document.getElementById("accessory-total");
 let accessoryCost = document.getElementById("accessory-price");
 let accessoryBuyFactor = 1.06;
@@ -46,6 +51,7 @@ let accessoryMultiplier = 1;
 
 // Variables CHUCHES
 const buyTreat = document.getElementById("treat-button");
+const treatList = document.getElementById("treat-list");
 let totalTreat = document.getElementById("treat-total");
 let treatCost = document.getElementById("treat-price");
 let treatBuyFactor = 1.02;
@@ -57,7 +63,7 @@ function addToLove(amount) {
 };
 
 function loseLove() {
-    if(Number(lpsLost.innerText) === 0 ) {
+    if(Number(lpsLost.innerText) === 0) {
         lpsLost.innerText = 1;
     } else {
         lpsLost.innerText = Math.ceil(Number(lpsLost.innerText) * factor);
@@ -82,10 +88,13 @@ function playGame() {
     addToLove(-Number(lpsLost.innerText));
 
     lovePerSecond.innerText = Number(lpsGained.innerText) - Number(lpsLost.innerText);
-    lpsGained.innerText = Number(waterPerSecond) + Number(foodPerSecond) + Number(bedPerSecond) + Number(toyPerSecond) + Number(accessoryPerSecond) + Number(treatPerSecond);
-    // console.log(`${totalWater.innerText} water | ${totalFood.innerText} food | ${totalBed.innerText} bed | ${totalToy.innerText} toy | ${totalAccessory.innerText} accessory | ${totalTreat.innerText} treat`);
+    lpsGained.innerText = Number(waterPerSecond) + Number(foodPerSecond) + Number(bedPerSecond) 
+                        + Number(toyPerSecond) + Number(accessoryPerSecond) + Number(treatPerSecond);
+    // console.log(`${totalWater.innerText} water | ${totalFood.innerText} food | ${totalBed.innerText} bed 
+    //            | ${totalToy.innerText} toy | ${totalAccessory.innerText} accessory | ${totalTreat.innerText} treat`);
 
-    if((Number(totalWater.innerText) >= 90) && (Number(totalFood.innerText) >= 40) && (Number(totalBed.innerText) >= 35) && (Number(totalToy.innerText) >= 20) && (Number(totalAccessory.innerText) >= 25) && (Number(totalTreat.innerText) >= 15)) {
+    if((Number(totalWater.innerText) >= 90) && (Number(totalFood.innerText) >= 40) && (Number(totalBed.innerText) >= 35) && 
+       (Number(totalToy.innerText) >= 20) && (Number(totalAccessory.innerText) >= 25) && (Number(totalTreat.innerText) >= 15)) {
         window.location.replace("./../html/game-win.html");
     }
 
@@ -96,6 +105,10 @@ function playGame() {
 };
 
 function waterStyleUpdate() {
+    if(Number(totalWater.innerText) >= 90) {
+        waterList.style.textDecoration = "line-through";
+    }
+
     if(Number(totalLove.innerText) >= Number(waterCost.innerText)) {
         buyWater.style.backgroundColor = "yellowgreen";
     } else {
@@ -104,6 +117,10 @@ function waterStyleUpdate() {
 }
 
 function foodStyleUpdate() {
+    if(Number(totalFood.innerText) >= 40) {
+        foodList.style.textDecoration = "line-through";
+    }
+
     if(Number(totalLove.innerText) >= Number(foodCost.innerText)) {
         buyFood.style.backgroundColor = "yellowgreen";
     } else {
@@ -112,6 +129,10 @@ function foodStyleUpdate() {
 }
 
 function bedStyleUpdate() {
+    if(Number(totalBed.innerText) >= 35) {
+        bedList.style.textDecoration = "line-through";
+    }
+
     if(Number(totalLove.innerText) >= Number(bedCost.innerText)) {
         buyBed.style.backgroundColor = "yellowgreen";
     } else {
@@ -120,6 +141,10 @@ function bedStyleUpdate() {
 }
 
 function toyStyleUpdate() {
+    if(Number(totalToy.innerText) >= 20) {
+        toyList.style.textDecoration = "line-through";
+    }
+
     if(Number(totalLove.innerText) >= Number(toyCost.innerText)) {
         buyToy.style.backgroundColor = "yellowgreen";
     } else {
@@ -128,6 +153,10 @@ function toyStyleUpdate() {
 }
 
 function accessoryStyleUpdate() {
+    if(Number(totalAccessory.innerText) >= 25) {
+        accessoryList.style.textDecoration = "line-through";
+    }
+
     if(Number(totalLove.innerText) >= Number(accessoryCost.innerText)) {
         buyAccessory.style.backgroundColor = "yellowgreen";
     } else {
@@ -136,12 +165,33 @@ function accessoryStyleUpdate() {
 }
 
 function treatStyleUpdate() {
+    if(Number(totalTreat.innerText) >= 15) {
+        treatList.style.textDecoration = "line-through";
+    }
+
     if(Number(totalLove.innerText) >= Number(treatCost.innerText)) {
         buyTreat.style.backgroundColor = "yellowgreen";
     } else {
         buyTreat.style.backgroundColor = "silver";
     }
 }
+
+function mouseUp() {
+    if(totalAccessory.innerText >= 5) {
+        yunaInteract.src = "./../img/yunanormals.png";
+    } else {
+        yunaInteract.src = "./../img/yunanormaln.png";    
+    }
+    
+};
+
+function mouseDown() {
+    if(totalAccessory.innerText >= 5) {
+        yunaInteract.src = "./../img/yunahappys.png";
+    } else {
+        yunaInteract.src = "./../img/yunahappyn.png";    
+    }
+};
 
 window.addEventListener('load', () => {
     

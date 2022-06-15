@@ -10,63 +10,63 @@
 <body>
   <section id="love">
     <div>
-      <h1><span id="love-total">0</span> amor</h1>
-      <h2>(<span id="love-per-second">0</span> amor por segundo)</h2>
+      <h1><span id="love-total">0</span> <img class="biglove-icon" src="./../img/love.png" /></h1>
+      <h2>(<span id="love-per-second">0</span> <img class="biglove-icon" src="./../img/love.png" /> por segundo)</h2>
     </div>
     <div>
-      <h3>( +<span id="lps-gained">0</span> | -<span id="lps-lost">0</span> )</h3>
+      <h3>[ +<span id="lps-gained">0</span> <img class="love-icon" src="./../img/love.png"> | -<span id="lps-lost">0</span> <img class="love-icon" src="./../img/love.png"> ]</h3>
     </div>
   </section>
   <section id="display">
-    <img id="yuna" src="./../img/yuna.jpg" alt="Yuna" />
+    <img id="yuna" src="./../img/yunanormaln.png" alt="Yuna" onmousedown="mouseDown()" onmouseup="mouseUp()"/>
     <div id="list">
-      <img src="./../img/pin.png" alt="Chincheta" />
-      <h3>Para ser feliz, necesito:</h3>
+      <img id="pin" src="./../img/pin.png" alt="Chincheta" />
+      <h3>Cosas que necesito:</h3>
       <ul>
-        <li>90 Agua</li>
-        <li>40 Comida</li>
-        <li>35 Camas</li>
-        <li>20 Juguetes</li>
-        <li>25 Accesorios</li>
-        <li>15 Chuches</li>
+        <li id="water-list">90 Agua</li>
+        <li id="food-list">40 Comida</li>
+        <li id="bed-list">35 Camas</li>
+        <li id="toy-list">20 Juguetes</li>
+        <li id="accessory-list">25 Accesorios</li>
+        <li id="treat-list">15 Chuches</li>
       </ul>
     </div>
   </section>
   <section id="shop-items">
     <div id="water">
       <button id="water-button">
-        <h3><span id="water-total">0</span><br>Agua</h3>
-        <p><span id="water-price">10</span> ❤</p>
+        <p><span id="water-price">10</span> <img class="love-icon" src="./../img/love.png"></p>
+        <p><span id="water-total">0</span><br>Agua</p>
       </button>
     </div>
     <div id="food">
       <button id="food-button">
-        <h3><span id="food-total">0</span><br>Comida</h3>
-        <p><span id="food-price">50</span> ❤</p>
+        <p><span id="food-price">50</span> <img class="love-icon" src="./../img/love.png"></p>
+        <p><span id="food-total">0</span><br>Comida</p>
       </button>
     </div>
     <div id="bed">
       <button id="bed-button">
-        <h3><span id="bed-total">0</span><br>Camas</h3>
-        <p><span id="bed-price">100</span> ❤</p>
+        <p><span id="bed-price">100</span> <img class="love-icon" src="./../img/love.png"></p>
+        <p><span id="bed-total">0</span><br>Camas</p>
       </button>
     </div>
     <div id="toy">
       <button id="toy-button">
-        <h3><span id="toy-total">0</span><br>Juguetes</h3>
-        <p><span id="toy-price">500</span> ❤</p>
+        <p><span id="toy-price">500</span> <img class="love-icon" src="./../img/love.png"></p>
+        <p><span id="toy-total">0</span><br>Juguetes</p>
       </button>
     </div>
     <div id="accessory">
       <button id="accessory-button">
-        <h3><span id="accessory-total">0</span><br>Accesorios</h3>
-        <p><span id="accessory-price">1000</span> ❤</p>
+        <p><span id="accessory-price">1000</span> <img class="love-icon" src="./../img/love.png"></p>
+        <p><span id="accessory-total">0</span><br>Accesorios</p>
       </button>
     </div>
     <div id="treat">
       <button id="treat-button">
-        <h3><span id="treat-total">0</span><br>Chuches</h3>
-        <p><span id="treat-price">5000</span> ❤</p>
+        <p><span id="treat-price">5000</span> <img class="love-icon" src="./../img/love.png"></p>
+        <p><span id="treat-total">0</span><br>Chuches</p>
       </button>
     </div>
   </section>

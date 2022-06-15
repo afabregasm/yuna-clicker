@@ -37,6 +37,7 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    box-shadow: 5px 5px #000;
 }
 
 #love div {
@@ -58,6 +59,15 @@ body {
     margin: 0px;
 }
 
+.biglove-icon {
+    height: 20px;
+    width: auto;
+}
+.love-icon {
+    height: 15px;
+    width: auto;
+}
+
 #display {
     width: 140vh;
     display: flex;
@@ -69,7 +79,8 @@ body {
 #yuna {
     height: 500px;
     width: auto;
-    margin: 10px;
+    margin-left: 300px;
+    margin-bottom: -50px;
     transition: all 0.2s ease-in-out;
 }
 
@@ -83,8 +94,8 @@ body {
 
 #list {
     margin: 10px;
-    padding: 40px 20px;
-    background-color: rgb(255, 250, 242);
+    padding: 40px 30px;
+    background-image: url(./../img/paper.png);
     border: 3px solid #000;
     border-bottom-left-radius: 15px 255px;
     border-bottom-right-radius: 225px 15px;
@@ -97,7 +108,7 @@ body {
     align-items: flex-start;
 }
 
-#list img {
+#pin {
     height: 40px;
     width: auto;
     margin-top: -50px;
@@ -114,7 +125,6 @@ body {
 }
 
 #shop-items button {
-    font-family: 'Montserrat', sans-serif;
     height: 150px;
     width: 150px;
     margin: 0px 10px;
@@ -131,6 +141,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 5px #000;
+}
+
+#shop-items p {
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #shop-items button:hover {
