@@ -2,7 +2,7 @@
 let gameStart = false;
 const yunaInteract = document.getElementById("yuna");
 let increment = 1;
-let factor = 1.09;
+let factor = 1.08;
 let totalLove = document.getElementById("love-total");
 let lovePerSecond = document.getElementById("love-per-second");
 let lpsGained = document.getElementById("lps-gained");
@@ -110,7 +110,7 @@ window.addEventListener('load', () => {
             totalWater.innerText = Number(totalWater.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(waterCost.innerText);
             waterCost.innerText = Math.round(10 * (Number(waterBuyFactor) ** Number(totalWater.innerText)));
-            if(Number(totalWater.innerText) % 25 === 0) {
+            if(Number(totalWater.innerText) % 20 === 0) {
                 waterMultiplier += 1;
             }
         }
@@ -121,7 +121,7 @@ window.addEventListener('load', () => {
             totalFood.innerText = Number(totalFood.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(foodCost.innerText);
             foodCost.innerText = Math.round(50 * (Number(foodBuyFactor) ** Number(totalFood.innerText)));
-            if (Number(totalFood.innerText) % 25 === 0) {
+            if (Number(totalFood.innerText) % 15 === 0) {
                 foodMultiplier += 1;
             }
         }
@@ -132,7 +132,7 @@ window.addEventListener('load', () => {
             totalBed.innerText = Number(totalBed.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(bedCost.innerText);
             bedCost.innerText = Math.round(100 * (Number(bedBuyFactor) ** Number(totalBed.innerText)));
-            if (Number(totalBed.innerText) % 15 === 0) {
+            if (Number(totalBed.innerText) % 10 === 0) {
                 bedMultiplier += 1;
             }
         }
@@ -210,3 +210,10 @@ window.addEventListener('load', () => {
 //     document.getElementById("water-button"));
 
 // water.getCost();
+
+// -------------------------------------------------------- //
+//          POSIBLE BONUS: YUNA CLICKER INFINITY            //
+// -------------------------------------------------------- //
+
+// Modo de juego competitivo sin condición de victoria, contrarreloj contra la pérdida de amor.
+// Cuando pierdes te da un score en función de los items de la tienda que hayas comprado.
