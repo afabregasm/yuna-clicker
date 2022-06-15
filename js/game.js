@@ -85,11 +85,11 @@ function playGame() {
     // console.log(`${totalWater.innerText} water | ${totalFood.innerText} food | ${totalBed.innerText} bed | ${totalToy.innerText} toy | ${totalAccessory.innerText} accessory | ${totalTreat.innerText} treat`);
 
     if((Number(totalWater.innerText) >= 90) && (Number(totalFood.innerText) >= 40) && (Number(totalBed.innerText) >= 35) && (Number(totalToy.innerText) >= 25) && (Number(totalAccessory.innerText) >= 25) && (Number(totalTreat.innerText) >= 15)) {
-        window.location.href = "./../game-win.html";
+        window.location.replace("./../html/game-win.html");
     }
 
     if(Number(lovePerSecond.innerText) < 0) {
-        window.location.href = "./../game-lose.html";
+        window.location.replace("./../html/game-lose.html");
     }
 
 };
@@ -110,8 +110,8 @@ window.addEventListener('load', () => {
             totalWater.innerText = Number(totalWater.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(waterCost.innerText);
             waterCost.innerText = Math.round(10 * (Number(waterBuyFactor) ** Number(totalWater.innerText)));
-            if(Number(totalWater.innerText)%25 === 0) {
-                waterMultiplier +=1;
+            if(Number(totalWater.innerText) % 25 === 0) {
+                waterMultiplier += 1;
             }
         }
     });
@@ -121,8 +121,8 @@ window.addEventListener('load', () => {
             totalFood.innerText = Number(totalFood.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(foodCost.innerText);
             foodCost.innerText = Math.round(50 * (Number(foodBuyFactor) ** Number(totalFood.innerText)));
-            if (Number(totalFood.innerText)%25 === 0){
-                foodMultiplier +=1;
+            if (Number(totalFood.innerText) % 25 === 0) {
+                foodMultiplier += 1;
             }
         }
     });
@@ -132,8 +132,8 @@ window.addEventListener('load', () => {
             totalBed.innerText = Number(totalBed.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(bedCost.innerText);
             bedCost.innerText = Math.round(100 * (Number(bedBuyFactor) ** Number(totalBed.innerText)));
-            if (Number(totalBed.innerText)%15 === 0){
-                bedMultiplier +=1;
+            if (Number(totalBed.innerText) % 15 === 0) {
+                bedMultiplier += 1;
             }
         }
     });
@@ -143,8 +143,8 @@ window.addEventListener('load', () => {
             totalToy.innerText = Number(totalToy.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(toyCost.innerText);
             toyCost.innerText = Math.round(500 * (Number(toyBuyFactor) ** Number(totalToy.innerText)));
-            if (Number(totalToy.innerText)%5 === 0){
-                toyMultiplier +=1;
+            if (Number(totalToy.innerText) % 5 === 0) {
+                toyMultiplier += 1;
             }
         }
     });
@@ -154,8 +154,8 @@ window.addEventListener('load', () => {
             totalAccessory.innerText = Number(totalAccessory.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(accessoryCost.innerText);
             accessoryCost.innerText = Math.round(1000 * (Number(accessoryBuyFactor) ** Number(totalAccessory.innerText)));
-            if (Number(totalAccessory.innerText)%10 === 0){
-                accessoryMultiplier +=1;
+            if (Number(totalAccessory.innerText) % 10 === 0) {
+                accessoryMultiplier += 1;
             }
         }
     });
@@ -165,8 +165,8 @@ window.addEventListener('load', () => {
             totalTreat.innerText = Number(totalTreat.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(treatCost.innerText);
             treatCost.innerText = Math.round(5000 * (Number(treatBuyFactor) ** Number(totalTreat.innerText)));
-            if (Number(totalTreat.innerText)%5 === 0){
-                treatMultiplier +=1;
+            if (Number(totalTreat.innerText) % 5 === 0) {
+                treatMultiplier += 1;
             }
         }
     });
