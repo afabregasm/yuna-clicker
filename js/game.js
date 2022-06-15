@@ -85,11 +85,11 @@ function playGame() {
     // console.log(`${totalWater.innerText} water | ${totalFood.innerText} food | ${totalBed.innerText} bed | ${totalToy.innerText} toy | ${totalAccessory.innerText} accessory | ${totalTreat.innerText} treat`);
 
     if((Number(totalWater.innerText) >= 90) && (Number(totalFood.innerText) >= 40) && (Number(totalBed.innerText) >= 35) && (Number(totalToy.innerText) >= 25) && (Number(totalAccessory.innerText) >= 25) && (Number(totalTreat.innerText) >= 15)) {
-        window.location.replace("../game-win.html");
+        window.location.replace("./../game-win.html");
     }
 
     if(Number(lovePerSecond.innerText) < 0) {
-        window.location.replace("../game-lose.html");
+        window.location.replace("./../game-lose.html");
     }
 
 };
