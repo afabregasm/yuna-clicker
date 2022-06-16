@@ -73,15 +73,17 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 #yuna {
+    position: absolute;
     height: 500px;
     width: auto;
-    margin-left: 300px;
-    margin-bottom: -50px;
+    margin-left: 180px;
+    margin-top: 60px;
     transition: all 0.2s ease-in-out;
+    z-index: 1;
 }
 
 #yuna:hover {
@@ -90,6 +92,51 @@ body {
 
 #yuna:active {
     transform: scale(0.95);
+}
+
+.dogobjects {
+    height: auto;
+    width: 950px;
+    margin: 0px;
+    position: absolute;
+    top: 150px;
+    
+}
+
+#water-icon {
+    margin-top: 10px;
+    height: 40px;
+    width: auto;
+}
+
+#food-icon {
+    margin-top: 10px;
+    height: 40px;
+    width: auto;
+}
+
+#bed-icon {
+    margin-top: 10px;
+    height: 40px;
+    width: auto;
+}
+
+#toy-icon {
+    margin-top: 10px;
+    height: 40px;
+    width: auto;
+}
+
+#accessory-icon {
+    margin-top: 10px;
+    height: 40px;
+    width: auto;
+}
+
+#treat-icon {
+    margin-top: 10px;
+    height: 40px;
+    width: auto;
 }
 
 #list {

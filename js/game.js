@@ -177,7 +177,7 @@ function treatStyleUpdate() {
 }
 
 function mouseUp() {
-    if(totalAccessory.innerText >= 5) {
+    if(totalAccessory.innerText >= 1) {
         yunaInteract.src = "./../img/yunanormals.png";
     } else {
         yunaInteract.src = "./../img/yunanormaln.png";    
@@ -186,7 +186,7 @@ function mouseUp() {
 };
 
 function mouseDown() {
-    if(totalAccessory.innerText >= 5) {
+    if(totalAccessory.innerText >= 1) {
         yunaInteract.src = "./../img/yunahappys.png";
     } else {
         yunaInteract.src = "./../img/yunahappyn.png";    
@@ -250,6 +250,7 @@ window.addEventListener('load', () => {
 
     buyAccessory.addEventListener('click', function() {
         if(totalLove.innerText >= Number(accessoryCost.innerText)) {
+            yunaInteract.src = "./../img/yunahappys.png";
             totalAccessory.innerText = Number(totalAccessory.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(accessoryCost.innerText);
             accessoryCost.innerText = Math.round(1000 * (Number(accessoryBuyFactor) ** Number(totalAccessory.innerText)));
