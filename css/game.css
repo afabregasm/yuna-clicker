@@ -7,14 +7,6 @@ html {
     width: 100%;
   }
 
-#gamelogo {
-    height: 120px;
-    width: auto;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
@@ -26,6 +18,14 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+}
+
+#game-logo {
+    height: 120px;
+    width: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 #love {
@@ -55,14 +55,8 @@ body {
     align-items: center;
 }
 
-#love h1 {
-    margin: 0px;
-}
-
-#love h2 {
-    margin: 0px;
-}
-
+#love h1,
+#love h2,
 #love h3 {
     margin: 0px;
 }
@@ -111,36 +105,11 @@ body {
     position: absolute;
 }
 
-#water-icon {
-    margin-top: 10px;
-    height: 40px;
-    width: auto;
-}
-
-#food-icon {
-    margin-top: 10px;
-    height: 40px;
-    width: auto;
-}
-
-#bed-icon {
-    margin-top: 10px;
-    height: 40px;
-    width: auto;
-}
-
-#toy-icon {
-    margin-top: 10px;
-    height: 40px;
-    width: auto;
-}
-
-#accessory-icon {
-    margin-top: 10px;
-    height: 40px;
-    width: auto;
-}
-
+#water-icon,
+#food-icon,
+#bed-icon,
+#toy-icon,
+#accessory-icon,
 #treat-icon {
     margin-top: 10px;
     height: 40px;
@@ -200,13 +169,6 @@ body {
     box-shadow: 5px 5px #000;
 }
 
-#shop-items p {
-    margin: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-}
-
 #shop-items button:hover {
     transform: scale(1.1);
 }
@@ -215,22 +177,17 @@ body {
     transform: scale(0.9);
 }
 
-#water-display{
-    visibility: hidden;
+#shop-items p {
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-#food-display{
-    visibility: hidden;
-}
-
-#bed-display{
-    visibility: hidden;
-}
-
-#toy-display{
-    visibility: hidden;
-}
-
-#treat-display{
+#water-display,
+#food-display,
+#bed-display,
+#toy-display,
+#treat-display {
     visibility: hidden;
 }

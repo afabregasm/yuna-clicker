@@ -1,4 +1,3 @@
-// Variables GLOBALES
 let gameStart = false;
 const yunaInteract = document.getElementById("yuna");
 
@@ -9,15 +8,10 @@ let lovePerSecond = document.getElementById("love-per-second");
 let lpsGained = document.getElementById("lps-gained");
 let lpsLost = document.getElementById("lps-lost");
 
-let waterDisplay = document.getElementById("water-display");
-let foodDisplay = document.getElementById("food-display");
-let bedDisplay = document.getElementById("bed-display");
-let toyDisplay = document.getElementById("toy-display");
-let treatDisplay = document.getElementById("treat-display");
-
 // Variables AGUA
 const buyWater = document.getElementById("water-button");
 const waterList = document.getElementById("water-list");
+const waterDisplay = document.getElementById("water-display");
 let totalWater = document.getElementById("water-total");
 let waterCost = document.getElementById("water-price");
 let waterBuyFactor = 1.07;
@@ -26,6 +20,7 @@ let waterMultiplier = 1;
 // Variables COMIDA
 const buyFood = document.getElementById("food-button");
 const foodList = document.getElementById("food-list");
+const foodDisplay = document.getElementById("food-display");
 let totalFood = document.getElementById("food-total");
 let foodCost = document.getElementById("food-price");
 let foodBuyFactor = 1.14;
@@ -34,6 +29,7 @@ let foodMultiplier = 1;
 // Variables CAMAS
 const buyBed = document.getElementById("bed-button");
 const bedList = document.getElementById("bed-list");
+const bedDisplay = document.getElementById("bed-display");
 let totalBed = document.getElementById("bed-total");
 let bedCost = document.getElementById("bed-price");
 let bedBuyFactor = 1.12;
@@ -42,6 +38,7 @@ let bedMultiplier = 1;
 // Variables JUGUETES
 const buyToy = document.getElementById("toy-button");
 const toyList = document.getElementById("toy-list");
+const toyDisplay = document.getElementById("toy-display");
 let totalToy = document.getElementById("toy-total");
 let toyCost = document.getElementById("toy-price");
 let toyBuyFactor = 1.10;
@@ -58,6 +55,7 @@ let accessoryMultiplier = 1;
 // Variables CHUCHES
 const buyTreat = document.getElementById("treat-button");
 const treatList = document.getElementById("treat-list");
+const treatDisplay = document.getElementById("treat-display");
 let totalTreat = document.getElementById("treat-total");
 let treatCost = document.getElementById("treat-price");
 let treatBuyFactor = 1.02;
@@ -95,9 +93,7 @@ function playGame() {
 
     lovePerSecond.innerText = Number(lpsGained.innerText) - Number(lpsLost.innerText);
     lpsGained.innerText = Number(waterPerSecond) + Number(foodPerSecond) + Number(bedPerSecond) 
-                        + Number(toyPerSecond) + Number(accessoryPerSecond) + Number(treatPerSecond);
-    // console.log(`${totalWater.innerText} water | ${totalFood.innerText} food | ${totalBed.innerText} bed 
-    //            | ${totalToy.innerText} toy | ${totalAccessory.innerText} accessory | ${totalTreat.innerText} treat`);
+                          + Number(toyPerSecond) + Number(accessoryPerSecond) + Number(treatPerSecond);
 
     if((Number(totalWater.innerText) >= 90) && (Number(totalFood.innerText) >= 40) && (Number(totalBed.innerText) >= 35) && 
        (Number(totalToy.innerText) >= 20) && (Number(totalAccessory.innerText) >= 25) && (Number(totalTreat.innerText) >= 15)) {
@@ -111,6 +107,7 @@ function playGame() {
 };
 
 function waterStyleUpdate() {
+
     if(Number(totalWater.innerText) >= 90) {
         waterList.style.textDecoration = "line-through";
     }
@@ -123,6 +120,7 @@ function waterStyleUpdate() {
 }
 
 function foodStyleUpdate() {
+
     if(Number(totalFood.innerText) >= 40) {
         foodList.style.textDecoration = "line-through";
     }
@@ -135,6 +133,7 @@ function foodStyleUpdate() {
 }
 
 function bedStyleUpdate() {
+
     if(Number(totalBed.innerText) >= 35) {
         bedList.style.textDecoration = "line-through";
     }
@@ -147,6 +146,7 @@ function bedStyleUpdate() {
 }
 
 function toyStyleUpdate() {
+
     if(Number(totalToy.innerText) >= 20) {
         toyList.style.textDecoration = "line-through";
     }
@@ -159,6 +159,7 @@ function toyStyleUpdate() {
 }
 
 function accessoryStyleUpdate() {
+
     if(Number(totalAccessory.innerText) >= 25) {
         accessoryList.style.textDecoration = "line-through";
     }
@@ -171,6 +172,7 @@ function accessoryStyleUpdate() {
 }
 
 function treatStyleUpdate() {
+
     if(Number(totalTreat.innerText) >= 15) {
         treatList.style.textDecoration = "line-through";
     }
