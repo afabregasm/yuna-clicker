@@ -15,9 +15,21 @@ body {
     background-size: 2000px auto;
     background-position: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+}
+
+#socials {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 20px;
+}
+
+#socials img {
+    height: 40px;
+    width: auto;
 }
 
 #game-logo {

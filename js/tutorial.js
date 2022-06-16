@@ -1,4 +1,4 @@
-var swiper = new Swiper('.swiper-container', {
+let swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 20,
     effect: 'fade',

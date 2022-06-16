@@ -1,3 +1,4 @@
+// Variables GLOBALES
 let gameStart = false;
 const yunaInteract = document.getElementById("yuna");
 

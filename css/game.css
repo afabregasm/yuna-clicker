@@ -5,7 +5,7 @@ html {
     padding: 0;
     height: 100%;
     width: 100%;
-  }
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -20,12 +20,16 @@ body {
     flex-direction: column;
 }
 
-#game-logo {
-    height: 120px;
-    width: auto;
+#socials {
     position: absolute;
     top: 0px;
     left: 0px;
+    margin: 20px;
+}
+  
+  #socials img {
+    height: 40px;
+    width: auto;
 }
 
 #love {
@@ -65,6 +69,7 @@ body {
     height: 20px;
     width: auto;
 }
+
 .love-icon {
     height: 15px;
     width: auto;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 html {
@@ -22,7 +22,18 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding: 32px;
+}
+
+#socials {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 20px;
+}
+
+#socials img {
+  height: 40px;
+  width: auto;
 }
 
 .logo {
@@ -179,7 +190,7 @@ button {
 }
 
 button:hover,
-button:focus-visible{
+button:focus-visible {
   background-size: 15000%;
 }
 
