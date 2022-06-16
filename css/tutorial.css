@@ -13,11 +13,11 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(45deg, #ffb000, #FFEBBF 50%);
-  background-size: 150% 150%;
+  margin: 0px;
+  height: 100vh;
+  background-image: url("./../img/background.png");
+  background-size: 2000px auto;
+  background-position: center;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -67,10 +67,10 @@ p {
 .swiper-wrapper {
   width: 100%;
   height: 100%;
+  position: relative;
   display: flex;
   align-items: center;
-  /* z-index: 1; */
-  position: relative;
+  z-index: 1;
 }
 
 .swiper-container {
@@ -81,7 +81,7 @@ p {
   max-width: 450px;
   height: 100%;
   max-height: 575px;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 .slider-image-wrapper {
@@ -93,13 +93,18 @@ p {
 .slider-item {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border: 3px solid #000;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   opacity: 0;
   background: linear-gradient(270deg, rgba(247,249,255,1) 0%, rgba(242,246,255,1) 100%);
+  box-shadow: 3px 3px #000;
   cursor: grab;
 }
   
@@ -159,8 +164,11 @@ p {
 }
 
 button {
-    border: 2px solid;
-    border-radius: 5px;
+  border: 3px solid #000;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
     padding: 10px 20px;
     font-size: 12px;
     text-transform: uppercase;
@@ -203,4 +211,5 @@ button {
 
   .button-ent {
       margin-top: 20px;
+      background-color: rgb(248,229,193);
   }

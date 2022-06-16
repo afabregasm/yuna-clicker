@@ -9,6 +9,12 @@ let lovePerSecond = document.getElementById("love-per-second");
 let lpsGained = document.getElementById("lps-gained");
 let lpsLost = document.getElementById("lps-lost");
 
+let waterDisplay = document.getElementById("water-display");
+let foodDisplay = document.getElementById("food-display");
+let bedDisplay = document.getElementById("bed-display");
+let toyDisplay = document.getElementById("toy-display");
+let treatDisplay = document.getElementById("treat-display");
+
 // Variables AGUA
 const buyWater = document.getElementById("water-button");
 const waterList = document.getElementById("water-list");
@@ -206,6 +212,7 @@ window.addEventListener('load', () => {
 
     buyWater.addEventListener('click', function() {
         if(totalLove.innerText >= Number(waterCost.innerText)) {
+            waterDisplay.style.visibility = "visible";
             totalWater.innerText = Number(totalWater.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(waterCost.innerText);
             waterCost.innerText = Math.round(10 * (Number(waterBuyFactor) ** Number(totalWater.innerText)));
@@ -217,6 +224,7 @@ window.addEventListener('load', () => {
 
     buyFood.addEventListener('click', function() {
         if(totalLove.innerText >= Number(foodCost.innerText)) {
+            foodDisplay.style.visibility = "visible";
             totalFood.innerText = Number(totalFood.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(foodCost.innerText);
             foodCost.innerText = Math.round(50 * (Number(foodBuyFactor) ** Number(totalFood.innerText)));
@@ -228,6 +236,7 @@ window.addEventListener('load', () => {
 
     buyBed.addEventListener('click', function() {
         if(totalLove.innerText >= Number(bedCost.innerText)) {
+            bedDisplay.style.visibility = "visible";
             totalBed.innerText = Number(totalBed.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(bedCost.innerText);
             bedCost.innerText = Math.round(100 * (Number(bedBuyFactor) ** Number(totalBed.innerText)));
@@ -239,6 +248,7 @@ window.addEventListener('load', () => {
 
     buyToy.addEventListener('click', function() {
         if(totalLove.innerText >= Number(toyCost.innerText)) {
+            toyDisplay.style.visibility = "visible";
             totalToy.innerText = Number(totalToy.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(toyCost.innerText);
             toyCost.innerText = Math.round(500 * (Number(toyBuyFactor) ** Number(totalToy.innerText)));
@@ -250,7 +260,7 @@ window.addEventListener('load', () => {
 
     buyAccessory.addEventListener('click', function() {
         if(totalLove.innerText >= Number(accessoryCost.innerText)) {
-            yunaInteract.src = "./../img/yunahappys.png";
+            yunaInteract.src = "./../img/yunanormals.png";
             totalAccessory.innerText = Number(totalAccessory.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(accessoryCost.innerText);
             accessoryCost.innerText = Math.round(1000 * (Number(accessoryBuyFactor) ** Number(totalAccessory.innerText)));
@@ -262,6 +272,7 @@ window.addEventListener('load', () => {
 
     buyTreat.addEventListener('click', function() {
         if(totalLove.innerText >= Number(treatCost.innerText)) {
+            treatDisplay.style.visibility = "visible";
             totalTreat.innerText = Number(totalTreat.innerText) + 1;
             totalLove.innerText = Number(totalLove.innerText) - Number(treatCost.innerText);
             treatCost.innerText = Math.round(5000 * (Number(treatBuyFactor) ** Number(totalTreat.innerText)));

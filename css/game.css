@@ -7,6 +7,14 @@ html {
     width: 100%;
   }
 
+#gamelogo {
+    height: 120px;
+    width: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
@@ -69,19 +77,21 @@ body {
 }
 
 #display {
-    width: 140vh;
+    height: 70vh;
+    width: 145vh;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 #yuna {
-    position: absolute;
+    position: fixed;
     height: 500px;
     width: auto;
+    margin-top: 10px;
     margin-left: 180px;
-    margin-top: 80px;
     transition: all 0.2s ease-in-out;
     z-index: 2;
 }
@@ -96,11 +106,9 @@ body {
 
 .dogobjects {
     height: auto;
-    width: 950px;
-    margin: 0px;
+    width: 980px;
+    margin-bottom: 100px;
     position: absolute;
-    top: 180px;
-    
 }
 
 #water-icon {
@@ -205,4 +213,24 @@ body {
 
 #shop-items button:active {
     transform: scale(0.9);
+}
+
+#water-display{
+    visibility: hidden;
+}
+
+#food-display{
+    visibility: hidden;
+}
+
+#bed-display{
+    visibility: hidden;
+}
+
+#toy-display{
+    visibility: hidden;
+}
+
+#treat-display{
+    visibility: hidden;
 }
