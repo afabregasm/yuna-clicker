@@ -79,7 +79,7 @@ body {
 #display {
     height: 70vh;
     width: 145vh;
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -87,7 +87,7 @@ body {
 }
 
 #yuna {
-    position: fixed;
+    position: absolute;
     height: 500px;
     width: auto;
     margin-top: 10px;
