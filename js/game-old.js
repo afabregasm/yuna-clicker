@@ -3,73 +3,11 @@ let gameStart = false;
 const yunaInteract = document.getElementById("yuna");
 
 let increment = 1;
-let factor = 1.08;
+let factor = 1.09;
 let totalLove = document.getElementById("love-total");
 let lovePerSecond = document.getElementById("love-per-second");
 let lpsGained = document.getElementById("lps-gained");
 let lpsLost = document.getElementById("lps-lost");
-
-class Item {
-  constructor(
-    itemButton,
-    itemList,
-    itemDisplay,
-    itemTotal,
-    itemCost,
-    itemBuyFactor,
-    itemMultiplier,
-    itemModule,
-    itemMax,
-    itemValue
-  ) {
-    this.itemButton = itemButton; //DOM
-    this.itemList = itemList; //DOM
-    this.itemDisplay = itemDisplay; //DOM
-    this.itemTotal = itemTotal; //DOM
-    this.itemCost = itemCost; //DOM
-    this.itemBuyFactor = itemBuyFactor;
-    this.itemMultiplier = itemMultiplier;
-    this.itemModule = itemModule;
-    this.itemMax = itemMax;
-    this.itemValue = itemValue;
-  }
-
-  itemButtonInit(totalLove) {
-    this.itemButton.addEventListener("click", () => {
-      if (totalLove.innerText >= Number(this.itemCost.innerText)) {
-        this.itemDisplay.style.visibility = "visible";
-        this.itemTotal.innerText = Number(this.itemTotal.innerText) + 1;
-        totalLove.innerText =
-          Number(totalLove.innerText) - Number(this.itemCost.innerText);
-        this.itemCost.innerText = Math.round(
-          10 * Number(this.itemBuyFactor) ** Number(this.itemTotal.innerText)
-        );
-        if (Number(this.itemTotal.innerText) % this.itemModule === 0) {
-          this.itemMultiplier += 1;
-        }
-      }
-    });
-  }
-
-  itemStyleUpdate(totalLove) {
-    if (Number(this.itemTotal.innerText) >= this.itemMax) {
-      this.itemList.style.textDecoration = "line-through";
-    }
-
-    if (Number(totalLove.innerText) >= Number(this.itemCost.innerText)) {
-      this.itemButton.style.backgroundColor = "yellowgreen";
-    } else {
-      this.itemButton.style.backgroundColor = "silver";
-    }
-  }
-
-  itemLoveValue() {
-    return (
-      Math.round(this.itemTotal.innerText * this.itemValue) *
-      this.itemMultiplier
-    );
-  }
-}
 
 // Variables AGUA
 const buyWater = document.getElementById("water-button");
@@ -379,3 +317,45 @@ window.addEventListener("load", () => {
   setInterval(accessoryStyleUpdate, 10);
   setInterval(treatStyleUpdate, 10);
 });
+
+// -------------------------------------------------------- //
+//           POSIBLE BONUS: REFACTORIZAR CÓDIGO             //
+// -------------------------------------------------------- //
+
+// class generator {
+
+//     constructor(name, cost, factor, times, costDOM, timesDOM, button){
+//         this.name = name;
+//         this.cost = cost;
+//         this.factor = factor;
+//         this.times = times;
+
+//         this.costDOM = costDOM;
+//         this.timesDOM = timesDOM;
+
+//         this.button = button;
+
+//         this.costDOM.innerText = cost;
+//         this.timesDOM.innerText = times;
+//     }
+
+//     // getters & setters
+//        const getCost(){
+//            return Number(this.costDOM.innerText);
+//        }
+
+// }
+
+// const water = new generator("water", 10, 1.07, 0,
+//     document.getElementById("water-price"),
+//     document.getElementById("water-total"),
+//     document.getElementById("water-button"));
+
+// water.getCost();
+
+// -------------------------------------------------------- //
+//          POSIBLE BONUS: YUNA CLICKER INFINITY            //
+// -------------------------------------------------------- //
+
+// Modo de juego competitivo sin condición de victoria, contrarreloj contra la pérdida de amor.
+// Cuando pierdes te da un score en función de los items de la tienda que hayas comprado.

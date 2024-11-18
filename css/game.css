@@ -1,113 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
 html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px;
-    height: 100vh;
-    background-image: url("./../img/background.png");
-    background-size: 2000px auto;
-    background-position: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  margin: 0px;
+  height: 100vh;
+  background-image: url("./../img/background.png");
+  background-size: 2000px auto;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
 #socials {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    margin: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 20px;
 }
-  
-  #socials img {
-    height: 40px;
-    width: auto;
+
+#socials img {
+  height: 40px;
+  width: auto;
 }
 
 #love {
-    width: 750px;
-    height: 100px;
-    margin: 15px 0px 0px 0px;
-    padding: 16px 24px;
-    border: 3px solid #000;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
-    background-color: rgb(255,178,1);
-    color: #000;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    box-shadow: 5px 5px #000;
+  width: 750px;
+  height: 100px;
+  margin: 15px 0px 0px 0px;
+  padding: 16px 24px;
+  border: 3px solid #000;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  background-color: rgb(255, 178, 1);
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 5px 5px #000;
 }
 
 #love div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #love h1,
 #love h2,
 #love h3 {
-    margin: 0px;
+  margin: 0px;
 }
 
 .biglove-icon {
-    height: 20px;
-    width: auto;
+  height: 20px;
+  width: auto;
 }
 
 .love-icon {
-    height: 15px;
-    width: auto;
+  height: 15px;
+  width: auto;
 }
 
 #display {
-    height: 70vh;
-    width: 145vh;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+  height: 70vh;
+  width: 145vh;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 #yuna {
-    position: absolute;
-    height: 500px;
-    width: auto;
-    margin-top: 10px;
-    margin-left: 180px;
-    transition: all 0.2s ease-in-out;
-    z-index: 2;
+  position: absolute;
+  height: 500px;
+  width: auto;
+  margin-top: 10px;
+  margin-left: 180px;
+  transition: all 0.2s ease-in-out;
+  z-index: 2;
 }
 
 #yuna:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #yuna:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .dogobjects {
-    height: auto;
-    width: 980px;
-    margin-bottom: 100px;
-    position: absolute;
+  height: auto;
+  width: 980px;
+  margin-bottom: 100px;
+  position: absolute;
 }
 
 #water-icon,
@@ -116,77 +116,77 @@ body {
 #toy-icon,
 #accessory-icon,
 #treat-icon {
-    margin-top: 10px;
-    height: 40px;
-    width: auto;
+  margin-top: 10px;
+  height: 40px;
+  width: auto;
 }
 
 #list {
-    margin: 10px;
-    padding: 40px 30px;
-    background-image: url(./../img/paper.png);
-    border: 3px solid #000;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
+  margin: 10px;
+  padding: 40px 30px;
+  background-image: url(./../img/paper.png);
+  border: 3px solid #000;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 #pin {
-    height: 40px;
-    width: auto;
-    margin-top: -50px;
-    padding-left: 100px;
+  height: 40px;
+  width: auto;
+  margin-top: -50px;
+  padding-left: 100px;
 }
 
 #shop-items {
-    height: auto;
-    margin: 0px 0px 20px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: 1;
+  height: auto;
+  margin: 0px 0px 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1;
 }
 
 #shop-items button {
-    height: 150px;
-    width: 150px;
-    margin: 0px 10px;
-    padding: 10px;
-    background-color: rgb(192,192,192);
-    border: 3px solid #000;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 5px 5px #000;
+  height: 150px;
+  width: 150px;
+  margin: 0px 10px;
+  padding: 10px;
+  background-color: rgb(192, 192, 192);
+  border: 3px solid #000;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px #000;
 }
 
 #shop-items button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 #shop-items button:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 #shop-items p {
-    margin: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
+  margin: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #water-display,
@@ -194,5 +194,5 @@ body {
 #bed-display,
 #toy-display,
 #treat-display {
-    visibility: hidden;
+  visibility: hidden;
 }

@@ -1,18 +1,18 @@
-let swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    effect: 'fade',
-    loop: false,
-    speed: 300,
+let swiper = new Swiper(".swiper-container", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  effect: "fade",
+  loop: false,
+  speed: 300,
 
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true
-    },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
 
-    navigation: {
-      nextEl: '.button-sig',
-      prevEl: '.button-ant',
-    }
-  });
+  navigation: {
+    nextEl: ".button-sig",
+    prevEl: ".button-ant",
+  },
+});

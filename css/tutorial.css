@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0px;
   height: 100vh;
   background-image: url("./../img/background.png");
@@ -51,10 +51,10 @@ h2 {
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
-  color: #26384E;
+  color: #26384e;
   transform: translateY(20px);
-  transition: all .4s ease;
-  transition-delay: .2s;
+  transition: all 0.4s ease;
+  transition-delay: 0.2s;
   overflow: hidden;
   max-width: 100%;
   text-overflow: ellipsis;
@@ -64,13 +64,13 @@ h2 {
 p {
   font-size: 18px;
   line-height: 24px;
-  color: #889DB8;
+  color: #889db8;
   transform: translateY(20px);
-  transition: all .4s ease;
-  transition-delay: .3s;
+  transition: all 0.4s ease;
+  transition-delay: 0.3s;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -85,7 +85,11 @@ p {
 }
 
 .swiper-container {
-  background: linear-gradient(270deg, rgba(247,249,255,1) 0%, rgba(242,246,255,1) 100%);
+  background: linear-gradient(
+    270deg,
+    rgba(247, 249, 255, 1) 0%,
+    rgba(242, 246, 255, 1) 100%
+  );
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   width: 100%;
   position: relative;
@@ -114,24 +118,28 @@ p {
   flex-direction: column;
   flex-shrink: 0;
   opacity: 0;
-  background: linear-gradient(270deg, rgba(247,249,255,1) 0%, rgba(242,246,255,1) 100%);
+  background: linear-gradient(
+    270deg,
+    rgba(247, 249, 255, 1) 0%,
+    rgba(242, 246, 255, 1) 100%
+  );
   box-shadow: 3px 3px #000;
   cursor: grab;
 }
-  
+
 .slider-item-content {
   padding: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .slider-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .swiper-pagination {
@@ -140,18 +148,18 @@ p {
   bottom: 8px;
   transform: translatex(-50%);
   z-index: 1;
-  width: auto!important;
+  width: auto !important;
 }
 
 .swiper-pagination-bullet {
-	border-radius: 0;
-	width: 8px;
+  border-radius: 0;
+  width: 8px;
   height: 8px;
   border-radius: 50%;
-	line-height: 30px;
-	font-size: 12px;
-	opacity: 1;
-	background: rgba(255, 185, 0,0.3);
+  line-height: 30px;
+  font-size: 12px;
+  opacity: 1;
+  background: rgba(255, 185, 0, 0.3);
   display: inline-block;
   margin-right: 8px;
   cursor: pointer;
@@ -159,7 +167,7 @@ p {
 }
 
 .swiper-pagination-bullet-active {
-	background: #FFB200;
+  background: #ffb200;
   width: 20px;
   border-radius: 10px;
 }
@@ -195,7 +203,7 @@ button:focus-visible {
 }
 
 button:active {
-  background-color: var(--r,#ffb000); /* color del efecto del botón */
+  background-color: var(--r, #ffb000); /* color del efecto del botón */
   background-size: 100%;
   transition: 0s;
 }
@@ -204,7 +212,7 @@ button:focus-visible {
   outline-offset: 2px;
   outline: 3px solid #000;
 }
-  
+
 .button-ant {
   --c: #fff;
   color: #000;
@@ -223,5 +231,5 @@ button:focus-visible {
 
 .button-ent {
   margin-top: 20px;
-  background-color: #FFB200;
+  background-color: #ffb200;
 }
